@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Solentine Cosmética | Belleza con Propósito</title>
+  
+  <!-- Meta tags SEO y Redes Sociales -->
+  <meta name="description" content="Solentine Cosmética · Belleza con Propósito. Partner Davines · Comfort Zone · Ferrari Professional · Sisneo · Indigo. Enlaces oficiales y contacto.">
+  <meta name="theme-color" content="#042F60">
+  <meta property="og:title" content="Solentine Cosmética | Enlaces Oficiales">
+  <meta property="og:description" content="Belleza con Propósito. Partner Davines · Comfort Zone · Ferrari Professional · Sisneo · Indigo">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon con el logotipo oficial -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Google Fonts: Cormorant Garamond (Elegancia de lujo) & Plus Jakarta Sans (Moderna y legible) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       VARIABLES Y PALETA DE COLORES SOLENTINE COSMÉTICA
+       - Azul Oscuro: #042F60
+       - Coral: #FF6F61
+       - Azul Pálido: #C2DCFF
+       ========================================================== */
+    :root {
+      --color-navy: #042F60;
+      --color-coral: #FF6F61;
+      --color-coral-light: #ff8b80;
+      --color-pale-blue: #C2DCFF;
+      --color-pale-blue-soft: rgba(194, 220, 255, 0.15);
+      
+      --text-primary: #FFFFFF;
+      --text-secondary: #C2DCFF;
+      --text-muted: rgba(194, 220, 255, 0.85);
+
+      --card-bg: rgba(255, 255, 255, 0.12);
+      --card-bg-hover: rgba(255, 255, 255, 0.22);
+      --card-border: rgba(255, 255, 255, 0.25);
+      --card-border-hover: rgba(194, 220, 255, 0.65);
+      
+      --shadow-soft: 0 10px 30px -5px rgba(4, 47, 96, 0.35);
+      --shadow-hover: 0 16px 36px -4px rgba(255, 111, 97, 0.35);
+      --shadow-glow: 0 0 35px rgba(255, 111, 97, 0.28);
+      
+      --radius-btn: 20px;
+      --radius-card: 28px;
+      --transition-smooth: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* Reset básico */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      min-height: 100dvh;
+      color: var(--text-primary);
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px 16px 48px;
+
+      /* DEGRADADO SUAVE DE FONDO EN TONOS AZULES SOLENTINE */
+      background-color: var(--color-navy);
+      background-image: 
+        radial-gradient(circle at 18% 18%, rgba(194, 220, 255, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(65, 130, 207, 0.45) 0%, transparent 50%),
+        radial-gradient(circle at 25% 75%, rgba(30, 85, 155, 0.5) 0%, transparent 50%),
+        radial-gradient(circle at 80% 85%, rgba(194, 220, 255, 0.4) 0%, transparent 45%),
+        linear-gradient(160deg, #042F60 0%, #083b74 30%, #154e93 60%, #4a87ce 85%, #C2DCFF 100%);
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* Efectos decorativos de fondo con sutil movimiento orgánico en tonos azules */
+    .ambient-glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+      animation: floatAura 18s ease-in-out infinite alternate;
+    }
+
+    .glow-blue-deep {
+      top: 15%;
+      right: -10%;
+      width: 360px;
+      height: 360px;
+      background: #1a5ca8;
+      opacity: 0.55;
+    }
+
+    .glow-blue-light {
+      bottom: 10%;
+      left: -10%;
+      width: 380px;
+      height: 380px;
+      background: var(--color-pale-blue);
+      opacity: 0.45;
+      animation-delay: -7s;
+    }
+
+    @keyframes floatAura {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-30px, 40px) scale(1.12); }
+      100% { transform: translate(25px, -30px) scale(0.95); }
+    }
+
+    /* Botón flotante para compartir en la esquina superior */
+    .top-actions {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 10;
+    }
+
+    .share-btn {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1.5px solid rgba(255, 111, 97, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--color-coral);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(4, 47, 96, 0.25);
+      transition: var(--transition-smooth);
+    }
+
+    .share-btn:hover {
+      background: var(--color-coral);
+      transform: scale(1.08);
+      border-color: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(255, 111, 97, 0.45);
+    }
+
+    .share-btn:hover svg {
+      stroke: #FFFFFF;
+    }
+
+    .share-btn:active {
+      transform: scale(0.94);
+    }
+
+    .share-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-coral);
+      transition: stroke 0.3s ease;
+    }
+
+    /* CONTENEDOR PRINCIPAL CENTRAL - ESTILO BIO / LINKTREE */
+    .bio-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* CABECERA: AVATAR, NOMBRE Y DESCRIPCIÓN */
+    .bio-header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 26px;
+      animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* FOTO / AVATAR CON INICIALES SC */
+    .avatar-container {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 18px auto;
+    }
+
+    .avatar-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #FFFFFF;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 3.5px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 
+        0 10px 32px rgba(4, 47, 96, 0.45),
+        0 0 28px rgba(255, 111, 97, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 10px;
+      transition: var(--transition-smooth);
+    }
+
+    .avatar-circle::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 50%, rgba(194, 220, 255, 0.25), transparent 70%);
+      pointer-events: none;
+    }
+
+    .avatar-logo-img {
+      width: 78%;
+      height: 78%;
+      object-fit: contain;
+      border-radius: 12px;
+      position: relative;
+      z-index: 2;
+      transition: var(--transition-smooth);
+    }
+
+    .avatar-container:hover .avatar-logo-img {
+      transform: scale(1.08);
+    }
+
+    /* Anillo exterior animado sutil */
+    .avatar-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px dashed rgba(194, 220, 255, 0.55);
+      animation: spinRing 26s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes spinRing {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Insignia de verificación oficial */
+    .verified-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 4px;
+      z-index: 3;
+      width: 28px;
+      height: 28px;
+      background: #0d5cb6;
+      color: #FFFFFF;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(4, 47, 96, 0.45);
+      animation: pulseBadge 3s ease-in-out infinite;
+    }
+
+    .verified-badge svg {
+      width: 15px;
+      height: 15px;
+      fill: #FFFFFF;
+    }
+
+    @keyframes pulseBadge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); box-shadow: 0 0 14px rgba(194, 220, 255, 0.7); }
+    }
+
+    /* NOMBRE O MARCA */
+    .brand-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 12px rgba(4, 47, 96, 0.6);
+    }
+
+    /* LEMA DESTACADO */
+    .brand-motto {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.28rem;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--color-pale-blue);
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 8px rgba(4, 47, 96, 0.5);
+    }
+
+    /* PARTNERS Y MARCAS DESTACADAS */
+    .partner-pill {
+      background: rgba(4, 47, 96, 0.42);
+      border: 1px solid rgba(194, 220, 255, 0.3);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 10px 16px;
+      border-radius: 16px;
+      display: inline-block;
+      max-width: 95%;
+      box-shadow: 0 4px 20px rgba(4, 47, 96, 0.25);
+    }
+
+    .partner-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--color-coral);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .partner-brands {
+      font-size: 0.88rem;
+      line-height: 1.45;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    .partner-dot {
+      color: var(--color-pale-blue);
+      padding: 0 4px;
+      font-weight: 700;
+    }
+
+    /* ==========================================================
+       COLUMNA DE BOTONES GRANDES IGUALES Y FÁCILES DE TOCAR
+       ========================================================== */
+    .buttons-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    /* Cada botón grande con microinteracciones y estilo glassmorphism */
+    .link-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 64px;
+      padding: 14px 20px;
+      text-decoration: none;
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      border-radius: var(--radius-btn);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+    }
+
+    /* Destello luminoso al interactuar */
+    .link-button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+      transform: skewX(-20deg);
+      transition: 0.75s ease;
+      pointer-events: none;
+    }
+
+    .link-button:hover::after {
+      left: 150%;
+    }
+
+    .link-button:hover {
+      background: rgba(255, 255, 255, 0.26);
+      border-color: rgba(255, 255, 255, 0.85);
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .link-button:active {
+      transform: translateY(1px) scale(0.985);
+      background: rgba(255, 255, 255, 0.32);
+    }
+
+    /* Estilo del botón principal web destacado en tonos azules */
+    .link-button.featured {
+      background: linear-gradient(135deg, rgba(194, 220, 255, 0.28) 0%, rgba(4, 47, 96, 0.6) 100%);
+      border: 1.5px solid rgba(194, 220, 255, 0.65);
+      box-shadow: 0 10px 30px -5px rgba(4, 47, 96, 0.5), 0 0 20px rgba(194, 220, 255, 0.2);
+    }
+
+    .link-button.featured:hover {
+      background: linear-gradient(135deg, rgba(194, 220, 255, 0.4) 0%, rgba(4, 47, 96, 0.72) 100%);
+      border-color: #FFFFFF;
+      box-shadow: 0 16px 36px -4px rgba(4, 47, 96, 0.6), 0 0 28px rgba(194, 220, 255, 0.35);
+    }
+
+    /* Contenido interno del botón */
+    .button-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+      text-align: left;
+    }
+
+    /* Icono dentro del botón */
+    .button-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #FFFFFF;
+      transition: var(--transition-smooth);
+    }
+
+    .link-button:hover .button-icon-box {
+      background: linear-gradient(135deg, #154e93, #4182cf);
+      transform: scale(1.08) rotate(3deg);
+      border-color: #FFFFFF;
+    }
+
+    .button-icon-box svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* Textos del botón */
+    .button-text-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .button-main-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .button-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: var(--color-coral);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(255, 111, 97, 0.4);
+    }
+
+    .button-subtext {
+      font-size: 0.8rem;
+      color: var(--color-pale-blue);
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
+    /* Flecha indicadora derecha en color azul claro */
+    .button-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(194, 220, 255, 0.12);
+      border: 1px solid rgba(194, 220, 255, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 8px;
+      transition: var(--transition-smooth);
+    }
+
+    .button-arrow svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--color-pale-blue);
+      stroke-width: 2.4;
+      fill: none;
+      transition: transform 0.3s ease;
+    }
+
+    .link-button:hover .button-arrow {
+      background: rgba(194, 220, 255, 0.28);
+      border-color: #FFFFFF;
+      transform: translateX(3px);
+      box-shadow: 0 4px 12px rgba(194, 220, 255, 0.35);
+    }
+
+    .link-button:hover .button-arrow svg {
+      stroke: #FFFFFF;
+      transform: translateX(2px);
+    }
+
+    /* Delays de animación para entrada escalonada */
+    .link-button:nth-child(1) { animation-delay: 0.2s; }
+    .link-button:nth-child(2) { animation-delay: 0.32s; }
+    .link-button:nth-child(3) { animation-delay: 0.44s; }
+
+    /* ==========================================================
+       SECCIÓN DE REDES SOCIALES CON ICONO (ABAJO)
+       ========================================================== */
+    .social-section {
+      width: 100%;
+      text-align: center;
+      margin-top: 6px;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s backwards;
+    }
+
+    .social-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-pale-blue);
+      margin-bottom: 14px;
+      opacity: 0.9;
+    }
+
+    .social-icons-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .social-icon-btn {
+      position: relative;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(4, 47, 96, 0.28);
+      transition: var(--transition-smooth);
+    }
+
+    .social-icon-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon-btn:hover {
+      transform: translateY(-4px) scale(1.12);
+      border-color: #FFFFFF;
+      box-shadow: 0 10px 24px rgba(255, 111, 97, 0.45);
+    }
+
+    .social-icon-btn:active {
+      transform: scale(0.92);
+    }
+
+    /* Colores temáticos al pasar el cursor por cada red */
+    .social-icon-btn.instagram:hover {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .social-icon-btn.whatsapp:hover {
+      background: #25D366;
+    }
+
+    .social-icon-btn.facebook:hover {
+      background: #1877F2;
+    }
+
+    .social-icon-btn.linkedin:hover {
+      background: #0A66C2;
+    }
+
+    /* PIE DE PÁGINA */
+    .bio-footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--color-pale-blue);
+      opacity: 0.85;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease 0.7s backwards;
+    }
+
+    .footer-year {
+      color: var(--color-pale-blue);
+      font-weight: 700;
+    }
+
+    .footer-logo {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      background: #FFFFFF;
+      padding: 4px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      box-shadow: 0 4px 14px rgba(4, 47, 96, 0.28);
+      border: 1px solid rgba(194, 220, 255, 0.6);
+      transition: var(--transition-smooth);
+    }
+
+    .footer-logo:hover {
+      transform: scale(1.15) rotate(4deg);
+      box-shadow: 0 6px 18px rgba(255, 111, 97, 0.45);
+    }
+
+    .bio-footer a {
+      color: #FFFFFF;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* MENSAJE TOAST AL COPIAR ENLACE */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(4, 47, 96, 0.95);
+      border: 1px solid var(--color-coral);
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ANIMACIONES KEYFRAMES */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* AJUSTES PARA PANTALLAS MÓVILES */
+    @media (max-width: 480px) {
+      body {
+        padding: 16px 14px 38px;
+      }
+      .brand-title {
+        font-size: 1.55rem;
+      }
+      .brand-motto {
+        font-size: 1.15rem;
+      }
+      .partner-brands {
+        font-size: 0.82rem;
+      }
+      .link-button {
+        min-height: 60px;
+        padding: 12px 16px;
+      }
+      .button-main-text {
+        font-size: 0.98rem;
+      }
+      .social-icon-btn {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Luces ambientales de fondo en tonos azules -->
+  <div class="ambient-glow glow-blue-deep"></div>
+  <div class="ambient-glow glow-blue-light"></div>
+
+  <!-- Botón Compartir Perfil (Esquina Superior) -->
+  <div class="top-actions">
+    <button class="share-btn" id="shareBtn" aria-label="Compartir perfil" title="Compartir enlace">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL LINK IN BIO -->
+  <main class="bio-wrapper">
+
+    <!-- CABECERA DE PERFIL -->
+    <header class="bio-header">
+      
+      <!-- FOTO: CÍRCULO CON LOGOTIPO OFICIAL -->
+      <div class="avatar-container">
+        <div class="avatar-ring"></div>
+        <div class="avatar-circle">
+          <img src="logo.png" alt="Logotipo Solentine Cosmética" class="avatar-logo-img">
+        </div>
+        <!-- Insignia de verificación y excelencia cosmética -->
+        <div class="verified-badge" title="Cuenta Oficial Solentine Cosmética">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- NOMBRE / MARCA -->
+      <h1 class="brand-title">Solentine Cosmética</h1>
+      
+      <!-- LEMA -->
+      <p class="brand-motto">Belleza con Propósito</p>
+
+      <!-- DESCRIPCIÓN CORTA: PARTNERS Y MARCAS -->
+      <div class="partner-pill">
+        <span class="partner-label">Marcas Oficiales & Partners</span>
+        <p class="partner-brands">
+          Davines <span class="partner-dot">·</span> 
+          Comfort Zone <span class="partner-dot">·</span> 
+          Ferrari Professional <span class="partner-dot">·</span> 
+          Sisneo <span class="partner-dot">·</span> 
+          Indigo
+        </p>
+      </div>
+
+    </header>
+
+    <!-- COLUMNA DE BOTONES GRANDES IGUALES -->
+    <section class="buttons-container" aria-label="Enlaces principales">
+
+      <!-- BOTÓN 1: PÁGINA WEB OFICIAL (Solicitado por el usuario) -->
+      <a href="https://www.solentine.com/" target="_blank" rel="noopener noreferrer" class="link-button featured" id="btn-web">
+        <div class="button-content">
+          <div class="button-icon-box" aria-hidden="true">
+            <!-- Icono Web / Esfera Global -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </div>
+          <div class="button-text-group">
+            <span class="button-main-text">
+              Página Web Oficial
+              <span class="button-badge">Oficial</span>
+            </span>
+            <span class="button-subtext">www.solentine.com · Tratamientos y cosmética</span>
+          </div>
+        </div>
+        <div class="button-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+      <!-- BOTÓN 2: ATENCIÓN Y CITAS DIRECTAS POR WHATSAPP (Formando la columna de botones) -->
+      <a href="https://wa.me/34639548601?text=Hola%20Solentine%20Cosmética,%20me%20gustaría%20solicitar%20información." target="_blank" rel="noopener noreferrer" class="link-button" id="btn-whatsapp">
+        <div class="button-content">
+          <div class="button-icon-box" aria-hidden="true">
+            <!-- Icono WhatsApp -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.04C9.36 7.04 9.09 7.1 8.87 7.34C8.64 7.58 8 8.18 8 9.41C8 10.64 8.9 11.83 9.03 12C9.15 12.17 10.79 14.69 13.3 15.77C15.39 16.68 15.82 16.5 16.27 16.46C16.72 16.42 17.73 15.86 17.94 15.27C18.15 14.68 18.15 14.18 18.09 14.07C18.03 13.97 17.86 13.91 17.61 13.79C17.36 13.66 16.13 13.06 15.9 12.97C15.68 12.89 15.51 12.85 15.35 13.1C15.18 13.34 14.71 13.91 14.56 14.07C14.42 14.24 14.27 14.26 14.02 14.14C13.77 14.01 12.98 13.75 12.03 12.91C11.3 12.26 10.8 11.45 10.65 11.2C10.51 10.96 10.64 10.82 10.76 10.7C10.87 10.59 11.01 10.4 11.14 10.25C11.26 10.11 11.3 10 11.39 9.85C11.47 9.7 11.43 9.56 11.37 9.43C11.3 9.31 10.78 8.04 10.57 7.53C10.36 7.03 10.15 7.1 9.99 7.09C9.84 7.08 9.69 7.04 9.53 7.04Z"/>
+            </svg>
+          </div>
+          <div class="button-text-group">
+            <span class="button-main-text">Citas y Asesoramiento</span>
+            <span class="button-subtext">+34 639 54 86 01 · WhatsApp Directo</span>
+          </div>
+        </div>
+        <div class="button-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </div>
+      </a>
+
+
+
+    </section>
+
+    <!-- REDES SOCIALES CON ICONO (ABAJO) -->
+    <section class="social-section" aria-label="Nuestras redes sociales">
+      <p class="social-title">Conecta con nosotros</p>
+      <div class="social-icons-row">
+        
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/solentinecosmetica/" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram" aria-label="Visitar Instagram de Solentine Cosmética" title="Instagram @solentinecosmetica">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/34639548601" target="_blank" rel="noopener noreferrer" class="social-icon-btn whatsapp" aria-label="Enviar WhatsApp a Solentine Cosmética" title="WhatsApp +34 639 548 601">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.04C9.36 7.04 9.09 7.1 8.87 7.34C8.64 7.58 8 8.18 8 9.41C8 10.64 8.9 11.83 9.03 12C9.15 12.17 10.79 14.69 13.3 15.77C15.39 16.68 15.82 16.5 16.27 16.46C16.72 16.42 17.73 15.86 17.94 15.27C18.15 14.68 18.15 14.18 18.09 14.07C18.03 13.97 17.86 13.91 17.61 13.79C17.36 13.66 16.13 13.06 15.9 12.97C15.68 12.89 15.51 12.85 15.35 13.1C15.18 13.34 14.71 13.91 14.56 14.07C14.42 14.24 14.27 14.26 14.02 14.14C13.77 14.01 12.98 13.75 12.03 12.91C11.3 12.26 10.8 11.45 10.65 11.2C10.51 10.96 10.64 10.82 10.76 10.7C10.87 10.59 11.01 10.4 11.14 10.25C11.26 10.11 11.3 10 11.39 9.85C11.47 9.7 11.43 9.56 11.37 9.43C11.3 9.31 10.78 8.04 10.57 7.53C10.36 7.03 10.15 7.1 9.99 7.09C9.84 7.08 9.69 7.04 9.53 7.04Z"/>
+          </svg>
+        </a>
+
+        <!-- FACEBOOK -->
+        <a href="https://www.facebook.com/SolentineCosmetica?locale=es_ES" target="_blank" rel="noopener noreferrer" class="social-icon-btn facebook" aria-label="Visitar Facebook de Solentine Cosmética" title="Facebook Solentine Cosmética">
+          <svg viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+
+        <!-- LINKEDIN -->
+        <a href="https://www.linkedin.com/company/solentine/posts/" target="_blank" rel="noopener noreferrer" class="social-icon-btn linkedin" aria-label="Visitar LinkedIn de Solentine" title="LinkedIn Solentine">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.69 1.69 0 0 0 1.69-1.69 1.69 1.69 0 0 0-1.69-1.68 1.69 1.69 0 0 0-1.69 1.68c0 .94.75 1.69 1.69 1.69m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bio-footer">
+      <img src="logo.png" alt="Logo Solentine Cosmética" class="footer-logo">
+      <p>© <span class="footer-year">2026</span> Solentine Cosmética · Todos los derechos reservados</p>
+    </footer>
+
+  </main>
+
+  <!-- MENSAJE TOAST -->
+  <div class="toast-msg" id="toastMsg" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>¡Enlace copiado al portapapeles!</span>
+  </div>
+
+  <!-- SCRIPT PARA COMPARTIR Y MICROINTERACCIONES -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const shareBtn = document.getElementById('shareBtn');
+      const toastMsg = document.getElementById('toastMsg');
+
+      const showToast = (text) => {
+        if (text) {
+          toastMsg.querySelector('span').textContent = text;
+        }
+        toastMsg.classList.add('show');
+        setTimeout(() => {
+          toastMsg.classList.remove('show');
+        }, 3200);
+      };
+
+      if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+          const shareData = {
+            title: 'Solentine Cosmética',
+            text: 'Solentine Cosmética · Belleza con Propósito',
+            url: window.location.href
+          };
+
+          if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+            try {
+              await navigator.share(shareData);
+            } catch (err) {
+              if (err.name !== 'AbortError') {
+                copyUrlFallback();
+              }
+            }
+          } else {
+            copyUrlFallback();
+          }
+        });
+      }
+
+      function copyUrlFallback() {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(window.location.href)
+            .then(() => showToast('¡Enlace copiado al portapapeles!'))
+            .catch(() => showToast('Enlace listo'));
+        } else {
+          showToast('Enlace: ' + window.location.href);
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
